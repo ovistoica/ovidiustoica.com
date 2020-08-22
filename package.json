@@ -5,12 +5,14 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-offline": "^3.2.23",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.13",
     "prop-types": "^15.7.2",
@@ -21,7 +23,13 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "eslint": "^7.7.0",
+    "eslint-config-kentcdodds": "^14.14.2",
+    "eslint-plugin-jest": "^23.20.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
   },
   "keywords": [
     "gatsby"
@@ -30,11 +38,27 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "yarn run prettier -- --write",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|ts|tsx)": [
+      "eslint",
+      "jest --findRelatedTests"
+    ],
+    "**/*.+(js|json|ts|tsx|md)": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
