@@ -45,14 +45,23 @@ export const ContentWrapper = styled.div`
       background: #fff;
       box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
       padding: 15px 0;
-
-      .main-logo {
-        display: none;
-      }
-      .logo-alt {
-        display: block;
-      }
     }
+  }
+
+  .nav-item {
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .page-title {
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 63px;
   }
 `;
 

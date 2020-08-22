@@ -2,8 +2,7 @@ import React, {Fragment} from 'react';
 import {ThemeProvider} from 'styled-components';
 import {ContentWrapper, GlobalStyle, ResetCSS, portfolioTheme} from '../theme';
 import SEO from '../components/seo';
-import Layout from '../components/layout';
-import Text from '../components/text';
+import Navbar from '../components/navbar';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -15,15 +14,7 @@ const IndexPage = () => (
       <ResetCSS />
       <GlobalStyle />
       <ContentWrapper>
-        <Layout>
-          <Text
-            content="Hello"
-            color="mainText"
-            mt="50px"
-            fontWeight="Bold"
-            as="h1"
-          />
-        </Layout>
+        <Navbar />
       </ContentWrapper>
     </Fragment>
   </ThemeProvider>

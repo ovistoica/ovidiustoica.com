@@ -1,0 +1,33 @@
+{
+  "MENU_ITEMS": [
+    {
+      "label": "ME",
+      "path": "#banner_section",
+      "offset": "0"
+    },
+    {
+      "label": "PROJECT",
+      "path": "#portfolio_section",
+      "offset": "0"
+    },
+    {
+      "label": "WHY ME?",
+      "path": "#process_section",
+      "offset": "0"
+    }
+  ],
+  "FOOTER_MENU": [
+    {
+      "label": "Contact",
+      "path": "#"
+    },
+    {
+      "label": "Privacy",
+      "path": "#"
+    },
+    {
+      "label": "Cookie Policy",
+      "path": "#"
+    }
+  ]
+}
