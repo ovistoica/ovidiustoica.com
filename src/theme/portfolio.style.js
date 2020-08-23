@@ -24,16 +24,70 @@ export const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'monion-pro', serif;
     background-color: ${props => props.theme.mainBrand};
+    margin: 0px;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
+  h1 {
+    /* Page Title */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 63px;
+  };
+
+  h2 {
+    /* Second header */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 0;
+  }
+ 
+ h3 {
+   /* Card Title */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    /* identical to box height, or 112% */
+    text-align: center;
+ }
+
+  h4 {
+    /* Footer title */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+
   h5,
   h6 {
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     margin-top: 0;
+  }
+
+  a {
+    /* Link */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: ${props => props.theme.colors.mainBrand};
+    padding: 8px 12px 8px 12px;
+    transition: 0.4s;
+
+    &:hover {
+      color: ${props => props.theme.colors.mainText};
+      transition: 0.4s;
+    }
   }
 
 `;
@@ -63,10 +117,13 @@ export const ContentWrapper = styled.div`
     font-size: 46px;
     line-height: 63px;
   }
-`;
 
-export const ButtonWrapper = styled.div`
-  position: relative;
-  z-index: 1;
-  display: inline-block;
+  .description {
+    /* description */
+    font-family: 'monion-pro', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;

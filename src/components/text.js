@@ -84,5 +84,5 @@ Text.propTypes = {
 Text.defaultProps = {
   as: 'p',
   mt: 0,
-  mb: '1rem',
+  mb: '24px',
 };

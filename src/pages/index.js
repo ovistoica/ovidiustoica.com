@@ -3,6 +3,7 @@ import {ThemeProvider} from 'styled-components';
 import {ContentWrapper, GlobalStyle, ResetCSS, portfolioTheme} from '../theme';
 import SEO from '../components/seo';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -15,6 +16,7 @@ const IndexPage = () => (
       <GlobalStyle />
       <ContentWrapper>
         <Navbar />
+        <Footer />
       </ContentWrapper>
     </Fragment>
   </ThemeProvider>

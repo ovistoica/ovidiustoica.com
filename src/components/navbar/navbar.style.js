@@ -24,26 +24,7 @@ export const NavbarStyle = styled.nav`
   align-items: center;
   max-width: 1216px;
   margin-left: auto;
-  margin-right: auto;
-
-  a {
-    /* NavItem */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    color: ${props => props.theme.colors.mainBrand};
-    padding: 8px 12px 8px 12px;
-    transition: 0.4s;
-
-    &:hover {
-      color: ${props => props.theme.colors.mainText};
-      transition: 0.4s;
-    }
-  }
-
- 
+  margin-right: auto; 
 
   ${display}
   ${alignItems}

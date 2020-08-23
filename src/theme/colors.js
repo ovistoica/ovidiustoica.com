@@ -8,4 +8,5 @@ export const colors = {
   buttonText: '#FFFFFF',
   borderColor: '#E6ECF8',
   information: '#363636',
+  hover: '#2f69ae',
 };
