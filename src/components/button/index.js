@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonStyle from './button.style';
+import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
+import {Icon} from 'react-icons-kit';
 
 const Button = ({
   type,
@@ -102,6 +104,7 @@ Button.defaultProps = {
   disabled: false,
   isMaterial: false,
   type: 'button',
+  icon: <Icon icon={ic_arrow_forward} size={24} />,
 };
 
 export default Button;

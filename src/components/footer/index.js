@@ -36,6 +36,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               content="If you're eager to build your new application or have an old one redone, I am here and ready to work."
               color="mainText"
               textAlign="left"
+              mb="10px"
             />
             <Text
               className="description"
@@ -55,6 +56,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               content="Handcrafted by me © 2020"
               color="mainText"
               classname="description"
+              mb="10px"
             />
             <a href="https://www.iubenda.com/en/privacy-and-cookie-policy-generator?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_general_restoftheworld_exact&utm_term=privacy%20policy&utm_content=326103716360&gclid=Cj0KCQjwp4j6BRCRARIsAGq4yMFYTzaOxOWhlYmiAg7mnMpPtgHBN2TLrDna7pQiWZ8Aq8ps0zQTjVEaArjuEALw_wcB">
               <Text content="Privacy Policy" />
@@ -66,6 +68,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               content="If you have a passion for programming and want to learn how to build scalable web and mobile applications, go ahead and introduce yourself."
               color="mainText"
               classname="description"
+              mb="10px"
             />
             <a href="mailto:ovidiu.stoica1094@gmail.com">
               <Text content="Say hello" />
@@ -74,13 +77,13 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
           <Box {...footerStyle}>
             <Text as="h4" content="Get Social" color="mainText" />
             <a href="https://www.facebook.com/stoica.ovidiu.3">
-              <Text content="Facebook" mb="0px" />
+              <Text content="Facebook" mb="10px" />
             </a>
             <a href="https://www.instagram.com/stoica94/">
-              <Text content="Instagram" mb="0px" />
+              <Text content="Instagram" mb="10px" />
             </a>
             <a href="https://www.linkedin.com/in/george-ovidiu-stoica-6b74b9123/">
-              <Text content="LinkedIn" mb="0px" />
+              <Text content="LinkedIn" mb="10px" />
             </a>
           </Box>
           <Box {...footerStyle}>
