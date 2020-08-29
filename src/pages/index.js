@@ -5,6 +5,8 @@ import SEO from '../components/seo';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import HomeBanner from '../components/home-banner';
+import WorkShowcase from '../components/work-showcase';
+import ProcessSection from '../components/process-section';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -18,6 +20,8 @@ const IndexPage = () => (
       <ContentWrapper>
         <Navbar />
         <HomeBanner />
+        <WorkShowcase />
+        <ProcessSection />
         <Footer />
       </ContentWrapper>
     </Fragment>

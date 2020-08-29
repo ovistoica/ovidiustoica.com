@@ -67,7 +67,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-  h5,
+  h5 {
+     /* Modal Action */
+     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+
   h6 {
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     margin-top: 0;
@@ -125,5 +134,15 @@ export const ContentWrapper = styled.div`
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .page-subtitle {
+    /* Page Subtitle */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    /* or 133% */
+    text-align: center;
   }
 `;
