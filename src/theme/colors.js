@@ -3,6 +3,7 @@ export const colors = {
   background: '#ffffff',
   mainBrand: '#3D7DCA',
   accent: '#FFDA27',
+  accentFaded: 'rgba(255, 218, 39, 0.1)',
   mainText: '#011E41',
   secondaryText: '#1C355E',
   buttonText: '#FFFFFF',

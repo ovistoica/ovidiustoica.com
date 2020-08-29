@@ -145,4 +145,15 @@ export const ContentWrapper = styled.div`
     /* or 133% */
     text-align: center;
   }
+
+  .quote {
+    /* Quote */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 42px;
+    /* or 131% */
+
+    text-align: center;
+  }
 `;

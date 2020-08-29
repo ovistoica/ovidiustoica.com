@@ -7,6 +7,7 @@ import Footer from '../components/footer';
 import HomeBanner from '../components/home-banner';
 import WorkShowcase from '../components/work-showcase';
 import ProcessSection from '../components/process-section';
+import QuoteCard from '../components/quote-card';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -22,6 +23,7 @@ const IndexPage = () => (
         <HomeBanner />
         <WorkShowcase />
         <ProcessSection />
+        <QuoteCard />
         <Footer />
       </ContentWrapper>
     </Fragment>

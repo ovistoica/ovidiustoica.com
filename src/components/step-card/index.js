@@ -38,7 +38,7 @@ StepCard.defaultProps = {
     border: `1px solid`,
     borderColor: 'borderColor',
     mx: '15px',
-    mb: '30px',
+    mb: '80px',
   },
   textContainer: {
     flexDirection: 'column',
