@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '../container';
 import Box from '../box';
 import Text from '../text';
+import Button from '../button';
 import {ProcessWrapper} from './process.style';
 import StepCard from '../step-card';
 
@@ -26,7 +27,7 @@ const ProcessSection = ({row, contentArea, description, stepsArea}) => {
           </Box>
         </Box>
         <Box {...row}>
-          <Box {...stepsArea} justifyContent="space-evenly">
+          <Box {...stepsArea}>
             <StepCard
               title="Plan"
               description="First, I'll listen, answer your questions, and establish the project scope and budget."
@@ -40,6 +41,9 @@ const ProcessSection = ({row, contentArea, description, stepsArea}) => {
               description="Finally, I'll execute the plan, and make sure you're aware of progress every step of the way."
             />
           </Box>
+        </Box>
+        <Box {...row}>
+          <Button title="See the process" />
         </Box>
       </Container>
     </ProcessWrapper>
@@ -63,7 +67,6 @@ ProcessSection.defaultProps = {
   },
   stepsArea: {
     width: ['100%', '100%', '100%', '100%'],
-    p: ['65px 0 80px 0', '65px 0 80px 0', '80px 0 60px 0', '80px 0 60px 0'],
     flexBox: true,
     flexWrap: 'wrap',
     justifyContent: 'center',

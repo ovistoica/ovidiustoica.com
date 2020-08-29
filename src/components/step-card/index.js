@@ -33,16 +33,20 @@ StepCard.defaultProps = {
   container: {
     flexBox: true,
     flexDirection: 'column',
-    maxWidth: '30%',
+    height: ['470px', '470px', '470px', '470px', '470px'],
+    width: ['80%', '80%', '500px', '400px', '366px'],
     border: `1px solid`,
     borderColor: 'borderColor',
+    mx: '15px',
+    mb: '30px',
   },
   textContainer: {
     flexDirection: 'column',
     flexBox: true,
     flex: 0.5,
-    justifyContent: 'space-around',
     alignItems: 'center',
+    justifyContent: 'center',
+    px: '10px',
   },
 };
 
