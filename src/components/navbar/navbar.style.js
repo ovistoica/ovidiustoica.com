@@ -48,8 +48,7 @@ export const CallToAction = styled.div`
   align-items: center;
   padding: 5px 10px 5px 10px;
   transition: 0.4s;
-  margin: 0px 12px 8px 12px;
-  margin-bottom: calc(1.45rem / 2);
+  margin: 2px 12px 0px 12px;
 
   a {
     margin-right: 10px;

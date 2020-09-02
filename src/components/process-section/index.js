@@ -5,6 +5,7 @@ import Text from '../text';
 import Button from '../button';
 import {ProcessWrapper} from './process.style';
 import StepCard from '../step-card';
+import {Link} from 'gatsby';
 
 const ProcessSection = ({row, contentArea, description, stepsArea}) => {
   return (
@@ -43,7 +44,9 @@ const ProcessSection = ({row, contentArea, description, stepsArea}) => {
           </Box>
         </Box>
         <Box {...row}>
-          <Button title="See the process" />
+          <Link href="/services">
+            <Button title="See the process" />
+          </Link>
         </Box>
       </Container>
     </ProcessWrapper>

@@ -10,18 +10,18 @@ const Navbar = ({row, logo}) => {
   return (
     <NavbarStyle>
       <Link href="/" style={logo}>
-        <Text className="page-title" content="Log" color="mainText" />
-        <Text className="page-title" content="o" color="accent" />
+        <Text className="page-title" content="Log" color="mainText" mb="0px" />
+        <Text className="page-title" content="o" color="accent" mb="0px" />
       </Link>
       <Box {...row} justifyContent="space-evenly" flex="0.5">
         <Link href="/services">
-          <Text content="Services" />
+          <Text content="Services" mb="0px" />
         </Link>
         <Link href="/work">
-          <Text content="Work" />
+          <Text content="Work" mb="0px" />
         </Link>
         <Link href="/about">
-          <Text content="About" />
+          <Text content="About" mb="0px" />
         </Link>
 
         <CallToAction>
