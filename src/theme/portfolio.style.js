@@ -156,4 +156,13 @@ export const ContentWrapper = styled.div`
 
     text-align: center;
   }
+
+  .about-description {
+    /* About description */
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;

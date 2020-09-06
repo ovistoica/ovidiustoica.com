@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '../box';
 import Text from '../text';
 import Container from '../container';
 import {BannerWrapper} from './banner.style';
 
-const DecorationBanner = ({row, contentArea, banner}) => {
+const DecorationBanner = ({row, contentArea, banner, title, description}) => {
   return (
     <BannerWrapper {...banner}>
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Box {...contentArea}>
             <Text
-              content="Always at your service"
+              content={title}
               as="h1"
               color="buttonText"
               textAlign="center"
@@ -20,13 +21,22 @@ const DecorationBanner = ({row, contentArea, banner}) => {
               className="description"
               color="buttonText"
               textAlign="center"
-              content="From project exploration to design concepts to SEO and finishing touches, I can handle every aspect of turning your vision into reality. With everything under one roof, we set an extremely high bar for quality and efficiency."
+              content={description}
+              px={['0px', '0px', '0px', '0px', '30px']}
             />
           </Box>
         </Box>
       </Container>
     </BannerWrapper>
   );
+};
+
+DecorationBanner.propTypes = {
+  banner: PropTypes.object,
+  row: PropTypes.object,
+  contentArea: PropTypes.object,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 DecorationBanner.defaultProps = {

@@ -5,7 +5,10 @@ import SEO from '../components/seo';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import DecorationBanner from '../components/decoration-banner';
-import ServicesSection from '../components/services-section';
+import NumbersShowcase from '../components/numbers-showcase';
+import AboutMe from '../components/about-me';
+import CoreValues from '../components/core-values';
+import QuoteCard from '../components/quote-card';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -19,10 +22,13 @@ const IndexPage = () => (
       <ContentWrapper>
         <Navbar />
         <DecorationBanner
-          title="Always at your service"
-          description="From project exploration to design concepts to SEO and finishing touches, I can handle every aspect of turning your vision into reality. With everything under one roof, we set an extremely high bar for quality and efficiency."
+          title="In love with building products"
+          description="For more than five years I've been working in the application  development space. It's not just what I do — it's who I am."
         />
-        <ServicesSection />
+        <NumbersShowcase />
+        <AboutMe />
+        <CoreValues />
+        <QuoteCard />
         <Footer />
       </ContentWrapper>
     </Fragment>
