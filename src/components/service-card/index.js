@@ -9,10 +9,13 @@ const ServiceCard = ({
   image,
   container,
   contentContainer,
+  imageContainer,
 }) => {
   return (
     <Box {...container}>
-      {React.isValidElement(image) ? image : null}
+      <Box {...imageContainer}>
+        {React.isValidElement(image) ? image : null}
+      </Box>
 
       <Box {...contentContainer}>
         <Text content={title} as="h3" color="mainText" />
@@ -32,6 +35,7 @@ ServiceCard.propTypes = {
   image: PropTypes.object.isRequired,
   container: PropTypes.object,
   contentContainer: PropTypes.object,
+  imageContainer: PropTypes.object,
 };
 
 ServiceCard.defaultProps = {
@@ -39,8 +43,8 @@ ServiceCard.defaultProps = {
     flexBox: true,
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    height: ['470px', '470px', '470px', '470px', '578px'],
-    width: ['80%', '80%', '500px', '400px', '577px'],
+    height: ['auto', 'auto', '500px', '550px', '578px'],
+    width: ['90%', '80%', '80%', '46%', '40%'],
     border: `1px solid`,
     borderColor: 'borderColor',
     backgroundColor: 'background',
@@ -51,12 +55,17 @@ ServiceCard.defaultProps = {
     mb: '30px',
   },
   contentContainer: {
-    mt: '95px',
     flexDirection: 'column',
     flexBox: true,
     alignItems: 'flex-start',
-    justifyContent: 'space-evenly',
-    flex: 0.5,
+    flex: 1,
+    mt: '50px',
+  },
+  imageContainer: {
+    flexDirection: 'column',
+    flexBox: true,
+    alignItems: 'flex-start',
+    flex: 0.4,
   },
 };
 

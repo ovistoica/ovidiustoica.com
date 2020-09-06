@@ -13,7 +13,8 @@ const ServicesSection = ({row}) => {
     flexDirection: 'column',
     flexBox: true,
     alignItems: 'flex-start',
-    justifyContent: 'space-evenly',
+    flex: 1,
+    mt: '-40px',
   };
   return (
     <ServicesWrapper>
@@ -32,7 +33,7 @@ const ServicesSection = ({row}) => {
           <ServiceCard
             image={<MacIcon />}
             title="Fix an existing app"
-            description="No app is perfect, this is why, my services include building new features or fixing old features of already existing apps."
+            description="No app is perfect, this is why, my services include building new features, fixing old features of already existing apps and full review of the performance of your application (start time, TTI, caching, user experience)"
           />
           <ServiceCard
             contentContainer={rocketTextContainer}

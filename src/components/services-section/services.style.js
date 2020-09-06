@@ -7,4 +7,5 @@ export const ServicesWrapper = styled.section`
   display: flex;
   transform: translateY(-8rem);
   padding: 5rem 1.5rem;
+  padding-bottom: 0px;
 `;
