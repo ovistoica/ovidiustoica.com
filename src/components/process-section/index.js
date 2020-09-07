@@ -6,6 +6,9 @@ import Button from '../button';
 import {ProcessWrapper} from './process.style';
 import StepCard from '../step-card';
 import {Link} from 'gatsby';
+import PlanIcon from '../../assets/svg/plan-icon';
+import MacIcon from '../../assets/svg/mac-icon';
+import DesignIcon from '../../assets/svg/design-icon';
 
 const ProcessSection = ({row, contentArea, description, stepsArea}) => {
   return (
@@ -30,14 +33,17 @@ const ProcessSection = ({row, contentArea, description, stepsArea}) => {
         <Box {...row}>
           <Box {...stepsArea}>
             <StepCard
+              image={<PlanIcon />}
               title="Plan"
               description="First, I'll listen, answer your questions, and establish the project scope and budget."
             />
             <StepCard
+              image={<DesignIcon />}
               title="Design"
               description="Then, based on your input, I’ll provide initial designs, wireframes and interactions."
             />
             <StepCard
+              image={<MacIcon />}
               title="Build"
               description="Finally, I'll execute the plan, and make sure you're aware of progress every step of the way."
             />

@@ -4,10 +4,12 @@ import Box from '../box';
 import Text from '../text';
 import {ImageWrapper} from './card.style';
 
-const StepCard = ({title, description, _, container, textContainer}) => {
+const StepCard = ({title, description, image, container, textContainer}) => {
   return (
     <Box {...container}>
-      <ImageWrapper />
+      <Box {...textContainer} flex={0.4} pt="10px">
+        {React.isValidElement(image) ? image : <ImageWrapper />}
+      </Box>
       <Box {...textContainer}>
         <Text content={title} as="h4" color="mainText" textAlign="center" />
         <Text

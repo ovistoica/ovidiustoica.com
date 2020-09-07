@@ -3,10 +3,10 @@ import Container from '../container';
 import Box from '../box';
 import {ServicesWrapper} from './services.style';
 import ServiceCard from '../service-card';
-import DesignIcon from './icons/design-icon';
-import PhoneIcon from './icons/phone-icon';
-import MacIcon from './icons/mac-icon';
-import RocketIcon from './icons/rocker-icon';
+import DesignIcon from '../../assets/svg/design-icon';
+import PhoneIcon from '../../assets/svg/phone-icon';
+import MacIcon from '../../assets/svg/mac-icon';
+import RocketIcon from '../../assets/svg/rocker-icon';
 
 const ServicesSection = ({row}) => {
   const rocketTextContainer = {
