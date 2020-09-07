@@ -103,13 +103,8 @@ export const GlobalStyle = createGlobalStyle`
 
 export const ContentWrapper = styled.div`
   overflow: hidden;
-  .sticky-nav-active {
-    .portfolio_navbar {
-      background: #fff;
-      box-shadow: 0px 3px 8px 0px rgba(43, 83, 135, 0.08);
-      padding: 15px 0;
-    }
-  }
+  display: flex;
+  flex-direction: column;
 
   .nav-item {
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;

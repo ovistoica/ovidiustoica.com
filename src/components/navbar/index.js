@@ -1,47 +1,55 @@
 import React from 'react';
-import {NavbarStyle, CallToAction} from './navbar.style';
+import styled from 'styled-components';
+import Burger from './burger';
 import {Link} from 'gatsby';
-import Box from '../box';
 import Text from '../text';
-import {Icon} from 'react-icons-kit';
-import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
 
-const Navbar = ({row, logo}) => {
+const Nav = styled.nav`
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.99);
+  z-index: 98;
+  max-width: 1200px;
+  align-self: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  /* @media (min-width: 768px) {
+    max-width: 750px;
+    width: 100%;
+  }
+  @media (min-width: 992px) {
+    max-width: 970px;
+    width: 100%;
+  }
+  @media (min-width: 1220px) {
+    max-width: '1200px';
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  } */
+`;
+
+const Navbar = ({logo}) => {
   return (
-    <NavbarStyle>
+    <Nav>
       <Link href="/" style={logo}>
         <Text className="page-title" content="Log" color="mainText" mb="0px" />
         <Text className="page-title" content="o" color="accent" mb="0px" />
       </Link>
-      <Box {...row} justifyContent="space-evenly" flex="0.5">
-        <Link href="/services">
-          <Text content="Services" mb="0px" />
-        </Link>
-        <Link href="/work">
-          <Text content="Work" mb="0px" />
-        </Link>
-        <Link href="/about">
-          <Text content="About" mb="0px" />
-        </Link>
-
-        <CallToAction>
-          <Link href="/contact" style={logo}>
-            <Text content="Start your project" mb="0px" />
-            <Icon icon={ic_arrow_forward} size={24} />
-          </Link>
-        </CallToAction>
-      </Box>
-    </NavbarStyle>
+      <Burger />
+    </Nav>
   );
 };
 
 Navbar.defaultProps = {
-  row: {
-    flexBox: true,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-  },
   logo: {
     display: 'flex',
     flexDirection: 'row',
