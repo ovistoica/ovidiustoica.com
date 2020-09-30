@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import {themeGet} from '@styled-system/theme-get';
+import {padding} from 'styled-system';
 
 export const BannerWrapper = styled.section`
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
+  ${padding}
 `;
 
 export const Title = styled.h1`
