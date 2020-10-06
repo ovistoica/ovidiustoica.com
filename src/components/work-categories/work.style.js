@@ -4,10 +4,12 @@ import {themeGet} from '@styled-system/theme-get';
 
 export const WorkWrapper = styled.section``;
 
-export const HoverWrapper = styled.div`
+export const HoverWrapper = styled.div.attrs(props => ({
+  className: props.className,
+}))`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  height: auto;
   cursor: pointer;
   
 
@@ -22,6 +24,11 @@ export const HoverWrapper = styled.div`
       visibility: visible;
       opacity: 1;
     }
+
+    .image-tags {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   ${width}
@@ -32,14 +39,12 @@ export const HoverWrapper = styled.div`
 .hvr-sweep-to-bottom {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  height: 100%;
 }
 .hvr-sweep-to-bottom:before {
   content: "";
@@ -53,7 +58,7 @@ export const HoverWrapper = styled.div`
   transform: scaleY(0);
   transform-origin: 50% 0;
   transition-property: transform;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
 .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
@@ -61,5 +66,18 @@ export const HoverWrapper = styled.div`
 }
 .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
   transform: scaleY(1);
+}
+
+
+.image-tags {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 50px;
+  transition: visibility 0s, opacity 0.2s linear;
 }
 `;

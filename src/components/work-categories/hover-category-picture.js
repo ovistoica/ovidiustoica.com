@@ -5,15 +5,32 @@ import Box from '../box';
 import Text from '../text';
 import Arrow from '../hover-picture/arrow';
 import {HoverWrapper} from './work.style';
+import {WorkTag} from './work-tag';
 
-const HoverPicture = ({container, hoverButton, imageNode, description}) => {
+const HoverPicture = ({
+  container,
+  hoverButton,
+  imageNode,
+  description,
+  tags,
+  name,
+}) => {
   return (
     <HoverWrapper {...container}>
       <Img
+        height="100%"
         className="hvr-sweep-to-bottom"
         fluid={imageNode.childImageSharp.fluid}
         alt={imageNode.base.split('.')[0]}
       />
+      <Box className="image-tags" width={container.width}>
+        {tags.map(tag => {
+          return (
+            <WorkTag tagName={tag} selected={false} key={`${name}Tag${tag}`} />
+          );
+        })}
+      </Box>
+
       <Box className="bottom-banner" {...hoverButton}>
         <Text as="h5" content={description} color="mainText" mb="0px" />
         <Arrow />
@@ -32,6 +49,7 @@ HoverPicture.propTypes = {
 HoverPicture.defaultProps = {
   container: {
     width: ['300px', '400px', '570px', '570px', '570px'],
+    margin: '5px',
   },
 
   hoverButton: {

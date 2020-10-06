@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import Box from '../box';
 import Container from '../container';
 import {WorkWrapper} from './work.style';
-import Button from '../button';
-import {themeGet} from '@styled-system/theme-get';
 import {graphql, useStaticQuery} from 'gatsby';
 import {ShowcaseWrapper} from '../work-showcase/showcase.style';
 import HoverPicture from './hover-category-picture';
+import {WorkTag} from './work-tag';
 
 const CATEGORIES = [
   'all',
   'mobile',
   'react',
-  'javascript',
   'react-native',
   'cross-platform',
   'animations',
@@ -21,6 +19,44 @@ const CATEGORIES = [
   'nodejs',
   'fullstack',
   'UX',
+];
+
+const WORK = [
+  {
+    name: 'Framey',
+    tags: [
+      'mobile',
+      'cross-platform',
+      'animations',
+      'fullstack',
+      'typescript',
+      'react-native',
+      'UX',
+    ],
+    description: 'Framey. The perfect travel companion',
+  },
+  {
+    name: 'Deepstash Web',
+    tags: ['react', 'typescript', 'animations', 'nodejs'],
+    description: 'Deepstash. An app for learning and self improvement',
+  },
+  {
+    name: 'Deepstash',
+    tags: [
+      'mobile',
+      'cross-platform',
+      'animations',
+      'typescript',
+      'react-native',
+      'UX',
+    ],
+    description: 'Deepstash. An app for learning and self improvement',
+  },
+  {
+    name: 'Workplace-ly',
+    tags: ['fullstack', 'nodejs', 'UX'],
+    description: 'Workplace-ly. Real time monitorisation of office spaces',
+  },
 ];
 
 const WorkWithCategories = ({row}) => {
@@ -58,17 +94,10 @@ const WorkWithCategories = ({row}) => {
       <Container noGutter mobileGutter width="1200px">
         <Box {...row} width="80%" mx="auto" mb="50px">
           {CATEGORIES.map(category => (
-            <Button
-              title={`#${category}`}
-              icon={null}
+            <WorkTag
               key={`category$${category}`}
-              className="hashtag"
-              m="10px"
-              p="0px"
-              bg={selected[category] ? 'secondaryText' : null}
-              hoverColor={
-                selected[category] ? themeGet('colors.mainText') : null
-              }
+              tagName={category}
+              selected={selected[category]}
               onClick={() => {
                 const currentVal = !!selected[category];
                 setSelected({...selected, [category]: !currentVal});
@@ -77,27 +106,14 @@ const WorkWithCategories = ({row}) => {
           ))}
         </Box>
         <ShowcaseWrapper>
-          {data.allFile.edges.reverse().map(({node}) => {
-            let description;
-            switch (node.base.split('.')[0]) {
-              case 'deepstash-web-main': {
-                description =
-                  'Deepstash. An app for learning and self improvement';
-                break;
-              }
-              case 'framey-main': {
-                description = 'Framey. The perfect travel companion';
-                break;
-              }
-              default: {
-                description = '';
-              }
-            }
+          {data.allFile.edges.reverse().map(({node}, index) => {
             return (
               <HoverPicture
                 imageNode={node}
                 key={node.base.split('.')[0]}
-                description={description}
+                description={WORK[index].description}
+                tags={WORK[index].tags}
+                name={WORK[index].name}
               />
             );
           })}
