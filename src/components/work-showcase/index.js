@@ -11,6 +11,7 @@ const WorkShowcase = () => {
         filter: {
           extension: {regex: "/(png)/"}
           relativeDirectory: {regex: "/work/"}
+          name: {regex: "/main/"}
         }
       ) {
         edges {
@@ -18,7 +19,12 @@ const WorkShowcase = () => {
             id
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                aspectRatio
+                base64
+                tracedSVG
+                src
+                srcSet
+                sizes
               }
             }
             base
@@ -34,12 +40,12 @@ const WorkShowcase = () => {
         {data.allFile.edges.reverse().map(({node}) => {
           let description;
           switch (node.base.split('.')[0]) {
-            case 'deepstash': {
+            case 'deepstash-web-main': {
               description =
                 'Deepstash. An app for learning and self improvement';
               break;
             }
-            case 'framey': {
+            case 'framey-main': {
               description = 'Framey. The perfect travel companion';
               break;
             }

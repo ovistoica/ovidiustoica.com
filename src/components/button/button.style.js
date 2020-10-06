@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {variant, alignItems, boxShadow} from 'styled-system';
+import {variant, alignItems, boxShadow, padding} from 'styled-system';
 import {themeGet} from '@styled-system/theme-get';
 import {base} from '../base';
 
@@ -36,7 +36,10 @@ const ButtonStyle = styled.button`
   }
 
   &:hover {
-    background-color: ${themeGet('colors.hover', '#028489')}
+    background-color: ${props =>
+      props.hoverColor
+        ? props.hoverColor
+        : themeGet('colors.hover', '#028489')};
   }
 
   /* Material style goes here */
@@ -56,6 +59,7 @@ const ButtonStyle = styled.button`
   ${alignItems}
   ${boxShadow}
   ${base}
+  ${padding}
 `;
 
 // prop types can also be added from the style functions

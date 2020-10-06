@@ -4,7 +4,8 @@ import {ContentWrapper, GlobalStyle, ResetCSS, portfolioTheme} from '../theme';
 import SEO from '../components/seo';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import DecorationBanner from '../components/decoration-banner';
+import Banner from '../components/work-page-banner';
+import WorkWithCategories from '../components/work-categories';
 
 const IndexPage = () => (
   <ThemeProvider theme={portfolioTheme}>
@@ -17,7 +18,11 @@ const IndexPage = () => (
       <GlobalStyle />
       <ContentWrapper>
         <Navbar />
-        <DecorationBanner title="Work Page" description="Not Ready" />
+        <Banner
+          title="My latest work + categories"
+          description="Expertly crafted with meticulous care and attention to detail."
+        />
+        <WorkWithCategories />
         <Footer />
       </ContentWrapper>
     </Fragment>

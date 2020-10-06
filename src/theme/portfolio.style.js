@@ -160,4 +160,16 @@ export const ContentWrapper = styled.div`
     font-size: 20px;
     line-height: 30px;
   }
+
+  .hashtag {
+    /* hashtag */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    /* identical to box height */
+
+    text-align: center;
+  }
 `;

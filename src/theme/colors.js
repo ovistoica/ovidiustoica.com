@@ -10,4 +10,5 @@ export const colors = {
   borderColor: '#E6ECF8',
   information: '#363636',
   hover: '#2f69ae',
+  hoverFaded: 'rgba(28, 53, 94, 0.3)',
 };
