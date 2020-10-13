@@ -17,6 +17,7 @@ export const HoverWrapper = styled.div.attrs(props => ({
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
+    z-index: 9999;
   }
 
   &:hover {
@@ -70,6 +71,8 @@ export const HoverWrapper = styled.div.attrs(props => ({
 
 
 .image-tags {
+  position: absolute;
+  top: 0;
   opacity: 0;
   visibility: hidden;
   position: absolute;

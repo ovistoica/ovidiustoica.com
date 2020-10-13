@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import Box from '../box';
 import Text from '../text';
 import Container from '../container';
@@ -21,7 +22,9 @@ const HomeBanner = ({row, contentArea}) => {
               className="description"
               content="Hi! I’m Ovidiu Stoica. For over 4 years, I've built beautiful, performant and  scalable applications for many business owners."
             />
-            <Button title="See my work" />
+            <Link href="/work">
+              <Button title="See my work" />
+            </Link>
           </Box>
         </Box>
       </Container>

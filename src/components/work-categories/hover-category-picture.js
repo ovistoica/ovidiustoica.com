@@ -17,24 +17,29 @@ const HoverPicture = ({
 }) => {
   return (
     <HoverWrapper {...container}>
-      <Img
-        height="100%"
-        className="hvr-sweep-to-bottom"
-        fluid={imageNode.childImageSharp.fluid}
-        alt={imageNode.base.split('.')[0]}
-      />
-      <Box className="image-tags" width={container.width}>
-        {tags.map(tag => {
-          return (
-            <WorkTag tagName={tag} selected={false} key={`${name}Tag${tag}`} />
-          );
-        })}
-      </Box>
+      <div className="hvr-sweep-to-bottom">
+        <Img
+          height="100%"
+          fluid={imageNode.childImageSharp.fluid}
+          alt={imageNode.base.split('.')[0]}
+        />
+        <Box className="image-tags" width={container.width}>
+          {tags.map(tag => {
+            return (
+              <WorkTag
+                tagName={tag}
+                selected={false}
+                key={`${name}Tag${tag}`}
+              />
+            );
+          })}
+        </Box>
 
-      <Box className="bottom-banner" {...hoverButton}>
-        <Text as="h5" content={description} color="mainText" mb="0px" />
-        <Arrow />
-      </Box>
+        <Box className="bottom-banner" {...hoverButton}>
+          <Text as="h5" content={description} color="mainText" mb="0px" />
+          <Arrow />
+        </Box>
+      </div>
     </HoverWrapper>
   );
 };

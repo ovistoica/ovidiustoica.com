@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-computed-key */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
@@ -21,8 +22,8 @@ const CATEGORIES = [
   'UX',
 ];
 
-const WORK = [
-  {
+const WORK = {
+  ['8cc9ef3b-e4ef-508e-96bd-20bea109525c']: {
     name: 'Framey',
     tags: [
       'mobile',
@@ -35,12 +36,12 @@ const WORK = [
     ],
     description: 'Framey. The perfect travel companion',
   },
-  {
+  ['22f4d9f2-a232-573c-b125-795aa957540e']: {
     name: 'Deepstash Web',
     tags: ['react', 'typescript', 'animations', 'nodejs'],
     description: 'Deepstash. An app for learning and self improvement',
   },
-  {
+  ['d5cbe137-fdd5-5111-981b-e226c845a886']: {
     name: 'Deepstash',
     tags: [
       'mobile',
@@ -52,12 +53,12 @@ const WORK = [
     ],
     description: 'Deepstash. An app for learning and self improvement',
   },
-  {
+  ['2f7bb1be-ef05-5a2e-8959-55e2738c3f5b']: {
     name: 'Workplace-ly',
     tags: ['fullstack', 'nodejs', 'UX'],
     description: 'Workplace-ly. Real time monitorisation of office spaces',
   },
-];
+};
 
 const WorkWithCategories = ({row}) => {
   const data = useStaticQuery(graphql`
@@ -89,6 +90,17 @@ const WorkWithCategories = ({row}) => {
   `);
 
   const [selected, setSelected] = useState({});
+
+  const shownWork = data.allFile.edges.reverse().filter(({node}) => {
+    const workTags = WORK[node.id].tags;
+    const selectedTags = Object.keys(selected).filter(value => selected[value]);
+    for (let i = 0; i < selectedTags.length; ++i) {
+      if (!workTags.includes(selectedTags[i])) {
+        return false;
+      }
+    }
+    return true;
+  });
   return (
     <WorkWrapper>
       <Container noGutter mobileGutter width="1200px">
@@ -106,14 +118,14 @@ const WorkWithCategories = ({row}) => {
           ))}
         </Box>
         <ShowcaseWrapper>
-          {data.allFile.edges.reverse().map(({node}, index) => {
+          {shownWork.map(({node}) => {
             return (
               <HoverPicture
                 imageNode={node}
-                key={node.base.split('.')[0]}
-                description={WORK[index].description}
-                tags={WORK[index].tags}
-                name={WORK[index].name}
+                key={`${WORK[node.id].name}`}
+                description={WORK[node.id].description}
+                tags={WORK[node.id].tags}
+                name={WORK[node.id].name}
               />
             );
           })}
