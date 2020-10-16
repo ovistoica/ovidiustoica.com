@@ -31,7 +31,7 @@ export const portfolioTheme = {
     '5px solid',
     '6px solid',
   ],
-  radius: [0],
+  radius: [0, 4, 8],
   widths: [36, 40, 44, 48, 54, 70, 81, 128, 256],
   heights: [36, 40, 44, 46, 48, 54, 70, 81, 128],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],

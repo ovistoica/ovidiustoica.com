@@ -44,7 +44,7 @@ const Button = ({
       {...props}
     >
       {position === 'left' && icon}
-      {title && <span className="btn-text">{title}</span>}
+      {title && <span className="button">{title}</span>}
       {position === 'right' && icon}
     </ButtonStyle>
   );

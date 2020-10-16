@@ -6,7 +6,6 @@ export const BannerWrapper = styled.section`
   display: flex;
   align-items: center;
   padding-top: 80px;
-  padding-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;

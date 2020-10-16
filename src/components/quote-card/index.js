@@ -32,7 +32,6 @@ const QuoteCard = ({
         <Box {...container}>
           <QuoteIcon />
           <Text
-            px="120px"
             className="quote"
             content="Ovidiu built the mobile app for my haircut business and everything was done speedily and on a good budget. I would absolutely recommend him to anyone."
           />
@@ -44,7 +43,6 @@ const QuoteCard = ({
             <Box {...nameContainer}>
               <Text as="h3" content={authorName} mb="0px" color="mainText" />
               <Text
-                className="description"
                 content={authorDescription}
                 mb="0px"
                 color="secondaryText"
@@ -61,18 +59,17 @@ QuoteCard.defaultProps = {
   authorImage: 'costumer.png',
   container: {
     backgroundColor: 'accentFaded',
-    width: '1200px',
-    height: '500px',
     flexBox: true,
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    p: '20px',
   },
   authorName: 'John Smith',
   authorDescription: 'Big Business Ltd.',
   imageContainer: {
-    width: '96px',
-    height: '96px',
+    width: ['60px', '96px', '96px', '96px', '96px'],
+    height: ['60px', '96px', '96px', '96px', '96px'],
     backgroundColor: '#c4c4c4',
     borderRadius: '80px',
   },

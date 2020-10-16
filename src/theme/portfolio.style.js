@@ -34,6 +34,12 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     font-size: 46px;
     line-height: 63px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 40px;
+    };
+   
   };
 
   h2 {
@@ -44,6 +50,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 32px;
     line-height: 36px;
     margin-top: 0;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 30px;
+    };
   }
  
  h3 {
@@ -55,6 +66,11 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 27px;
     /* identical to box height, or 112% */
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 22px;
+    };
  }
 
   h4 {
@@ -129,6 +145,11 @@ export const ContentWrapper = styled.div`
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   .page-subtitle {
@@ -139,6 +160,11 @@ export const ContentWrapper = styled.div`
     line-height: 32px;
     /* or 133% */
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   .quote {
@@ -150,6 +176,14 @@ export const ContentWrapper = styled.div`
     /* or 131% */
 
     text-align: center;
+    padding: 0px 120px 0px 120px;
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 0px;
+    }
   }
 
   .about-description {
@@ -171,5 +205,20 @@ export const ContentWrapper = styled.div`
     /* identical to box height */
 
     text-align: center;
+  }
+
+  .button {
+    /* Button */
+    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    padding-right: 5px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 `;

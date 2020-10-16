@@ -9,10 +9,16 @@ import Button from '../button';
 import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
 import {Icon} from 'react-icons-kit';
 import useBreakpoint from '../../hooks/useBreakpoint';
+import {portfolioTheme} from '../../theme';
+
+function getWidthInPixels() {
+  return window.screen.width * window.devicePixelRatio;
+}
+const isPhone = getWidthInPixels() <= 1125;
 
 const Footer = ({row, col, iconContainer, footerCol}) => {
-  const breakpoints = useBreakpoint();
-  const svgWidth = breakpoints && breakpoints.lg ? 300 : null;
+  const breakpoints = useBreakpoint(portfolioTheme.breakpoints);
+  const svgWidth = isPhone ? 300 : null;
   const footerStyle = {
     ...footerCol,
     ...(breakpoints && breakpoints.lg && {maxWidth: '200px'}),
@@ -43,14 +49,13 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               content="Since 2016, I've helped business owners like you to bring their ideas into reality."
               color="secondaryText"
               textAlign="left"
-              mr="200px"
             />
             <Button title="Let's work together" icon={buttonIcon} />
           </Box>
         </Box>
         <Box {...row} justifyContent="space-evenly">
           <Box {...footerStyle}>
-            <Text as="h4" content="Stoica Ovidiu " color="mainText" />
+            <Text as="h4" content="Stoica Ovidiu " color="mainText" mb="5px" />
             <Text
               maxWidth={breakpoints && breakpoints.lg && '120px'}
               content="Handcrafted by me © 2020"
@@ -63,36 +68,36 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
             </a>
           </Box>
           <Box {...footerStyle}>
-            <Text as="h4" content="Work together " color="mainText" />
+            <Text as="h4" content="Work together " color="mainText" mb="5px" />
             <Text
               content="If you have a passion for programming and want to learn how to build scalable web and mobile applications, go ahead and introduce yourself."
               color="mainText"
               classname="description"
-              mb="10px"
+              mb="5px"
             />
             <a href="mailto:ovidiu.stoica1094@gmail.com">
               <Text content="Say hello" />
             </a>
           </Box>
           <Box {...footerStyle}>
-            <Text as="h4" content="Get Social" color="mainText" />
+            <Text as="h4" content="Get Social" color="mainText" mb="5px" />
             <a href="https://www.facebook.com/stoica.ovidiu.3">
-              <Text content="Facebook" mb="10px" />
+              <Text content="Facebook" mb="5px" />
             </a>
             <a href="https://www.instagram.com/stoica94/">
-              <Text content="Instagram" mb="10px" />
+              <Text content="Instagram" mb="5px" />
             </a>
             <a href="https://www.linkedin.com/in/george-ovidiu-stoica-6b74b9123/">
-              <Text content="LinkedIn" mb="10px" />
+              <Text content="LinkedIn" mb="5px" />
             </a>
           </Box>
           <Box {...footerStyle}>
-            <Text as="h4" content="Contact" color="mainText" />
+            <Text as="h4" content="Contact" color="mainText" mb="5px" />
             <a href="mailto:ovidiu.stoica1094@gmail.com">
-              <Text content="Send an email" mb="10px" />
+              <Text content="Send an email" mb="5px" />
             </a>
             <a href="tel:+40745901643">
-              <Text content="+40 745901643" mb="10px" />
+              <Text content="+40 745901643" mb="5px" />
             </a>
           </Box>
         </Box>
@@ -125,7 +130,7 @@ Footer.defaultProps = {
   iconContainer: {
     pl: '15px',
     pr: '15px',
-    mb: ['40px', '0', '0', '0', '0', '0'],
+    mb: '0',
     flexBox: true,
     width: [1, 1, 1, 1 / 3, 1 / 3.5],
     display: 'flex',
@@ -148,8 +153,11 @@ Footer.defaultProps = {
     color: '#fff',
   },
   footerCol: {
+    flexBox: true,
+    flexDirection: 'column',
+    alignItems: isPhone ? 'center' : undefined,
     width: [1, 1 / 2, 1 / 2, 1 / 4, 1 / 4],
-    mb: ['40px', '0', '0', '0', '0', '0'],
+    mb: ['24px', '0', '0', '0', '0', '0'],
   },
   flexBox: {
     flexBox: true,

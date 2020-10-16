@@ -15,7 +15,6 @@ export const BannerWrapper = styled.section`
 
 export const Title = styled.h1`
   color: ${themeGet('colors.mainText')};
-  margin-bottom: 30px;
 `;
 
 export const AccentTitle = styled.span`

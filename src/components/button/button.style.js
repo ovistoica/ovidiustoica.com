@@ -6,9 +6,11 @@ import {base} from '../base';
 const ButtonStyle = styled.button`
   /* button default style */
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap;
   color: ${themeGet('colors.buttonText', '#ffffff')};
   background-color: ${themeGet('colors.mainBrand', '#028489')};
   min-height: ${themeGet('heights.3', '48')}px;
@@ -16,8 +18,6 @@ const ButtonStyle = styled.button`
   border-radius: ${themeGet('radius.0', '3')}px;
   font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   font-size: ${themeGet('fontSizes.3', '16')}px;
-  line-height: 36px;
-  font-weight: bold;
   padding-top: ${themeGet('space.1', '8')}px;
   padding-bottom: ${themeGet('space.1', '8')}px;
   padding-left: ${themeGet('space.4', '15')}px;
@@ -25,8 +25,8 @@ const ButtonStyle = styled.button`
   border: 0;
   transition: all 0.3s ease;
   span.btn-text {
-    padding-left: ${themeGet('space.1', '4')}px;
-    padding-right: ${themeGet('space.1', '4')}px;
+    padding-left: ${themeGet('space.0', '4')}px;
+    padding-right: ${themeGet('space.0', '4')}px;
   }
   span.btn-icon {
     display: flex;

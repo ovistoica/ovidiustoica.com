@@ -9,6 +9,11 @@ import {ShowcaseWrapper} from '../work-showcase/showcase.style';
 import HoverPicture from './hover-category-picture';
 import {WorkTag} from './work-tag';
 
+function getWidthInPixels() {
+  return window.screen.width * window.devicePixelRatio;
+}
+const isPhone = getWidthInPixels() <= 1125;
+
 const CATEGORIES = [
   'all',
   'mobile',
@@ -121,6 +126,7 @@ const WorkWithCategories = ({row}) => {
           {shownWork.map(({node}) => {
             return (
               <HoverPicture
+                isPhone={isPhone}
                 imageNode={node}
                 key={`${WORK[node.id].name}`}
                 description={WORK[node.id].description}

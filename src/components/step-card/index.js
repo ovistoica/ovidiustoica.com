@@ -7,7 +7,7 @@ import {ImageWrapper} from './card.style';
 const StepCard = ({title, description, image, container, textContainer}) => {
   return (
     <Box {...container}>
-      <Box {...textContainer} flex={0.4} pt="10px">
+      <Box {...textContainer} flex={0.35} pt="10px">
         {React.isValidElement(image) ? image : <ImageWrapper />}
       </Box>
       <Box {...textContainer}>
@@ -35,17 +35,17 @@ StepCard.defaultProps = {
   container: {
     flexBox: true,
     flexDirection: 'column',
-    height: ['470px', '470px', '470px', '470px', '470px'],
+    height: ['350px', '470px', '470px', '470px', '470px'],
     width: ['80%', '80%', '500px', '400px', '366px'],
     border: `1px solid`,
     borderColor: 'borderColor',
     mx: '15px',
-    mb: '80px',
+    mb: ['30px', '80px', '80px', '80px', '80px'],
   },
   textContainer: {
     flexDirection: 'column',
     flexBox: true,
-    flex: 0.5,
+    flex: 0.65,
     alignItems: 'center',
     justifyContent: 'center',
     px: '10px',

@@ -14,10 +14,11 @@ const HoverPicture = ({
   description,
   tags,
   name,
+  isPhone = false,
 }) => {
   return (
     <HoverWrapper {...container}>
-      <div className="hvr-sweep-to-bottom">
+      <div className={`${isPhone ? '' : 'hvr-sweep-to-bottom'}`}>
         <Img
           height="100%"
           fluid={imageNode.childImageSharp.fluid}
