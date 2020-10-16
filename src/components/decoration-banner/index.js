@@ -41,7 +41,7 @@ DecorationBanner.propTypes = {
 
 DecorationBanner.defaultProps = {
   banner: {
-    height: '376px',
+    height: '400px',
   },
   row: {
     flexBox: true,
@@ -56,6 +56,7 @@ DecorationBanner.defaultProps = {
     flexBox: true,
     flexWrap: 'wrap',
     justifyContent: 'center',
+    mt: '30px',
   },
 };
 

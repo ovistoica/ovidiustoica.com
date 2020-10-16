@@ -9,10 +9,12 @@ import {ShowcaseWrapper} from '../work-showcase/showcase.style';
 import HoverPicture from './hover-category-picture';
 import {WorkTag} from './work-tag';
 
+const isBrowser = typeof window !== `undefined`;
+
 function getWidthInPixels() {
-  return window.screen.width * window.devicePixelRatio;
+  return isBrowser ? 0 : window.screen.width * window.devicePixelRatio;
 }
-const isPhone = getWidthInPixels() <= 1125;
+const isPhone = isBrowser ? getWidthInPixels() <= 1125 : false;
 
 const CATEGORIES = [
   'all',

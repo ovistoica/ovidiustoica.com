@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react';
 import {portfolioTheme} from '../theme/index';
 
+const isBrowser = typeof window !== `undefined`;
+
 const useBreakpoint = (queries = portfolioTheme.mediaQueries) => {
   const [queryMatch, setQueryMatch] = useState(null);
 
@@ -23,7 +25,7 @@ const useBreakpoint = (queries = portfolioTheme.mediaQueries) => {
       setQueryMatch(updatedMatches);
     };
 
-    if (window && window.matchMedia) {
+    if (isBrowser && window && window.matchMedia) {
       const matches = {};
       keys.forEach(media => {
         if (typeof queries[media] === 'string') {

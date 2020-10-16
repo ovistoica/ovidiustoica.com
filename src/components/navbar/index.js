@@ -17,6 +17,10 @@ const Nav = styled.nav`
   margin-left: auto;
   margin-right: auto;
 
+  @media (max-width: 768px) {
+    height: 50px;
+  }
+
   ${padding}
 `;
 
@@ -70,13 +74,8 @@ const Navbar = ({logo}) => {
     <Nav>
       <NavContainer width="1200px" noGutter>
         <Link href="/" style={logo}>
-          <Text
-            className="page-title"
-            content="Log"
-            color="mainText"
-            mb="0px"
-          />
-          <Text className="page-title" content="o" color="accent" mb="0px" />
+          <Text as="h1" content="Log" color="mainText" mb="0px" />
+          <Text as="h1" content="o" color="accent" mb="0px" />
         </Link>
         <Burger />
       </NavContainer>

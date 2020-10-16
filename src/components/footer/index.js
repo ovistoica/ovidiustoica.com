@@ -10,11 +10,12 @@ import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
 import {Icon} from 'react-icons-kit';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import {portfolioTheme} from '../../theme';
+const isBrowser = typeof window !== `undefined`;
 
 function getWidthInPixels() {
-  return window.screen.width * window.devicePixelRatio;
+  return isBrowser ? 0 : window.screen.width * window.devicePixelRatio;
 }
-const isPhone = getWidthInPixels() <= 1125;
+const isPhone = isBrowser ? getWidthInPixels() <= 1125 : false;
 
 const Footer = ({row, col, iconContainer, footerCol}) => {
   const breakpoints = useBreakpoint(portfolioTheme.breakpoints);
