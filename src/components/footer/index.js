@@ -10,16 +10,9 @@ import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
 import {Icon} from 'react-icons-kit';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import {portfolioTheme} from '../../theme';
-const isBrowser = typeof window !== `undefined`;
-
-function getWidthInPixels() {
-  return isBrowser ? 0 : window.screen.width * window.devicePixelRatio;
-}
-const isPhone = isBrowser ? getWidthInPixels() <= 1125 : false;
 
 const Footer = ({row, col, iconContainer, footerCol}) => {
   const breakpoints = useBreakpoint(portfolioTheme.breakpoints);
-  const svgWidth = isPhone ? 300 : null;
   const footerStyle = {
     ...footerCol,
     ...(breakpoints && breakpoints.lg && {maxWidth: '200px'}),
@@ -31,7 +24,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
       <Container noGutter mobileGutter width="1440px">
         <Box {...row}>
           <Box {...iconContainer}>
-            <WebdevIcon width={svgWidth} />
+            <WebdevIcon className="web-icon" />
           </Box>
           <Box
             {...col}
@@ -80,7 +73,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               <Text content="Say hello" />
             </a>
           </Box>
-          <Box {...footerStyle}>
+          <Box {...footerStyle} className="center-footer-col">
             <Text as="h4" content="Get Social" color="mainText" mb="5px" />
             <a href="https://www.facebook.com/stoica.ovidiu.3">
               <Text content="Facebook" mb="5px" />
@@ -92,7 +85,7 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
               <Text content="LinkedIn" mb="5px" />
             </a>
           </Box>
-          <Box {...footerStyle}>
+          <Box {...footerStyle} className="center-footer-col">
             <Text as="h4" content="Contact" color="mainText" mb="5px" />
             <a href="mailto:ovidiu.stoica1094@gmail.com">
               <Text content="Send an email" mb="5px" />
@@ -156,7 +149,6 @@ Footer.defaultProps = {
   footerCol: {
     flexBox: true,
     flexDirection: 'column',
-    alignItems: isPhone ? 'center' : undefined,
     width: [1, 1 / 2, 1 / 2, 1 / 4, 1 / 4],
     mb: ['24px', '0', '0', '0', '0', '0'],
   },
