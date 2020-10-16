@@ -30,7 +30,7 @@ const CATEGORIES = [
 ];
 
 const WORK = {
-  ['8cc9ef3b-e4ef-508e-96bd-20bea109525c']: {
+  ['framey-main']: {
     name: 'Framey',
     tags: [
       'mobile',
@@ -43,12 +43,12 @@ const WORK = {
     ],
     description: 'Framey. The perfect travel companion',
   },
-  ['22f4d9f2-a232-573c-b125-795aa957540e']: {
+  ['deepstash-web-main']: {
     name: 'Deepstash Web',
     tags: ['react', 'typescript', 'animations', 'nodejs'],
     description: 'Deepstash. An app for learning and self improvement',
   },
-  ['d5cbe137-fdd5-5111-981b-e226c845a886']: {
+  ['deepstash']: {
     name: 'Deepstash',
     tags: [
       'mobile',
@@ -60,7 +60,7 @@ const WORK = {
     ],
     description: 'Deepstash. An app for learning and self improvement',
   },
-  ['2f7bb1be-ef05-5a2e-8959-55e2738c3f5b']: {
+  ['workplace-ly']: {
     name: 'Workplace-ly',
     tags: ['fullstack', 'nodejs', 'UX'],
     description: 'Workplace-ly. Real time monitorisation of office spaces',
@@ -99,7 +99,9 @@ const WorkWithCategories = ({row}) => {
   const [selected, setSelected] = useState({});
 
   const shownWork = data.allFile.edges.reverse().filter(({node}) => {
-    const workTags = WORK[node.id].tags;
+    const currentWork = node.base.split('.')[0];
+
+    const workTags = WORK[currentWork].tags;
     const selectedTags = Object.keys(selected).filter(value => selected[value]);
     for (let i = 0; i < selectedTags.length; ++i) {
       if (!workTags.includes(selectedTags[i])) {
@@ -126,14 +128,15 @@ const WorkWithCategories = ({row}) => {
         </Box>
         <ShowcaseWrapper>
           {shownWork.map(({node}) => {
+            const currentWork = node.base.split('.')[0];
             return (
               <HoverPicture
                 isPhone={isPhone}
                 imageNode={node}
-                key={`${WORK[node.id].name}`}
-                description={WORK[node.id].description}
-                tags={WORK[node.id].tags}
-                name={WORK[node.id].name}
+                key={`${WORK[currentWork].name}`}
+                description={WORK[currentWork].description}
+                tags={WORK[currentWork].tags}
+                name={WORK[currentWork].name}
               />
             );
           })}
