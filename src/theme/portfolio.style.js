@@ -53,7 +53,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 768px) {
       font-size: 24px;
-      line-height: 30px;
+      line-height: 28px;
     };
   }
  
@@ -212,12 +212,12 @@ export const ContentWrapper = styled.div`
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 36px;
     padding-right: 5px;
 
     @media (max-width: 768px) {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 26px;
     }
   }

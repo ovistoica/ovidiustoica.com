@@ -15,7 +15,9 @@ export const FooterWrapper = styled.footer`
     width: 394px;
     @media (max-width: 768px) {
       align-self: center;
-      width: 300px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

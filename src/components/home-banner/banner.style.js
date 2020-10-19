@@ -11,6 +11,10 @@ export const BannerWrapper = styled.section`
   justify-content: center;
 
   ${padding}
+
+  a {
+    padding: 0;
+  }
 `;
 
 export const Title = styled.h1`

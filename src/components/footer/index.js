@@ -133,8 +133,7 @@ Footer.defaultProps = {
   },
   col: {
     width: [1, 1 / 2, 1 / 2, 1 / 3, 1 / 3],
-    pl: '15px',
-    pr: '15px',
+    px: ['0px', '15px', '15px', '15px', '15px', '15px'],
     mb: ['40px', '0', '0', '0', '0', '0'],
   },
   linkStyle: {

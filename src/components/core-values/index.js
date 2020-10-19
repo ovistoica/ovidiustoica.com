@@ -30,10 +30,11 @@ AboutMe.defaultProps = {
     flexDirection: 'row',
   },
   textContainer: {
-    px: ['200px'],
+    px: ['0px', '0px', '80px', '80px', '200px'],
     flexBox: true,
     alignItems: 'center',
     flexDirection: 'column',
+    justifyContent: 'center',
   },
 };
 

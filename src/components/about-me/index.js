@@ -11,7 +11,7 @@ const AboutMe = ({row, textContainer}) => {
     query {
       about: file(relativePath: {eq: "ovidiu.png"}) {
         childImageSharp {
-          fluid(maxWidth: 550) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -24,8 +24,8 @@ const AboutMe = ({row, textContainer}) => {
       <Container noGutter mobileGutter width="1200px">
         <Box {...row}>
           <Box
-            width={['550px', '550px', '6000px', '400px', '450px']}
-            ml={['10px', '10px', '-20px', '-50px', '0px']}
+            width={['100%', '80%', '80%', '50%', '50%']}
+            // ml={['10px', '10px', '-20px', '-50px', '0px']}
           >
             <Img fluid={data.about.childImageSharp.fluid} />
           </Box>
@@ -55,10 +55,13 @@ AboutMe.defaultProps = {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    flex: 1,
   },
   textContainer: {
-    width: ['550px'],
-    height: ['400px'],
+    width: ['100%', '80%', '80%', '45%', '45%'],
+    ml: ['0', '0', '0', '15px', '15px'],
+    mt: ['10px', '10px', '10px', '0px', '0px'],
+
     flexBox: true,
     alignItems: 'flex-start',
     flexDirection: 'column',

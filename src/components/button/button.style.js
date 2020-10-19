@@ -14,14 +14,14 @@ const ButtonStyle = styled.button`
   color: ${themeGet('colors.buttonText', '#ffffff')};
   background-color: ${themeGet('colors.mainBrand', '#028489')};
   min-height: ${themeGet('heights.3', '48')}px;
-  min-width: ${themeGet('widths.3', '48')}px;
+  min-width: ${themeGet('widths.32', '48')}px;
   border-radius: ${themeGet('radius.0', '3')}px;
   font-family: 'itc-avant-garde-gothic-pro', sans-serif;
   font-size: ${themeGet('fontSizes.3', '16')}px;
-  padding-top: ${themeGet('space.1', '8')}px;
-  padding-bottom: ${themeGet('space.1', '8')}px;
-  padding-left: ${themeGet('space.4', '15')}px;
-  padding-right: ${themeGet('space.4', '15')}px;
+  padding-top: ${themeGet('space.0', '8')}px;
+  padding-bottom: ${themeGet('space.0', '8')}px;
+  padding-left: ${themeGet('space.2', '15')}px;
+  padding-right: ${themeGet('space.2', '15')}px;
   border: 0;
   transition: all 0.3s ease;
   span.btn-text {
