@@ -15,6 +15,7 @@ const Button = ({
   loaderColor,
   isMaterial,
   className,
+  isTag = false,
   ...props
 }) => {
   // Add all classs to an array
@@ -44,7 +45,9 @@ const Button = ({
       {...props}
     >
       {position === 'left' && icon}
-      {title && <span className="button">{title}</span>}
+      {title && (
+        <span className={`${isTag ? 'hashtag' : 'button'}`}>{title}</span>
+      )}
       {position === 'right' && icon}
     </ButtonStyle>
   );

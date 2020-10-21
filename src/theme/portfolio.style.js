@@ -90,6 +90,11 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-size: 16px;
     line-height: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 16px;
+    };
   }
 
 
@@ -200,11 +205,19 @@ export const ContentWrapper = styled.div`
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 2px;
+    min-height: 0px;
+    border-radius: 8px;
     /* identical to box height */
 
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   .button {

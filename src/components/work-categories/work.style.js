@@ -11,6 +11,7 @@ export const HoverWrapper = styled.div.attrs(props => ({
   flex-direction: column;
   height: auto;
   cursor: pointer;
+  margin: 10px;
   
 
   .bottom-banner {
@@ -24,6 +25,8 @@ export const HoverWrapper = styled.div.attrs(props => ({
     .bottom-banner {
       visibility: visible;
       opacity: 1;
+      z-index: 9999;
+
     }
 
     .image-tags {
@@ -46,6 +49,8 @@ export const HoverWrapper = styled.div.attrs(props => ({
   transition-property: color;
   transition-duration: 0.3s;
   height: 100%;
+
+
 }
 .hvr-sweep-to-bottom:before {
   content: "";
@@ -61,12 +66,16 @@ export const HoverWrapper = styled.div.attrs(props => ({
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+
+
 }
 .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
   color: white;
+
 }
 .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
   transform: scaleY(1);
+
 }
 
 
@@ -82,5 +91,10 @@ export const HoverWrapper = styled.div.attrs(props => ({
   justify-content: center;
   padding: 50px;
   transition: visibility 0s, opacity 0.2s linear;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    };
 }
 `;

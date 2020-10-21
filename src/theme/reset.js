@@ -1,10 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const ResetCSS = createGlobalStyle`
-  ::selection {
-    background: #333333;
-    color: #ffffff;
-  }
 
   html {
     box-sizing: border-box;
