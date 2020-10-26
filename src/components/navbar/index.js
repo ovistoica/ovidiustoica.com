@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import Burger from './burger';
-import {Link} from 'gatsby';
-import Text from '../text';
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import {padding, width} from 'styled-system';
+import Box from '../box';
+import Img from 'gatsby-image';
 
 const Nav = styled.nav`
   width: 100%;
@@ -70,12 +71,25 @@ const NavContainer = styled.div`
 `;
 
 const Navbar = ({logo}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: {eq: "logo/logo-background.png"}) {
+        childImageSharp {
+          fixed(width: 240, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Nav>
       <NavContainer width="1200px" noGutter>
         <Link href="/" style={logo}>
-          <Text as="h1" content="Log" color="mainText" mb="0px" />
-          <Text as="h1" content="o" color="accent" mb="0px" />
+          <Box flexBox={true} flex={1}>
+            <Img fixed={data.logo.childImageSharp.fixed} objectFit="cover" />
+          </Box>
         </Link>
         <Burger />
       </NavContainer>

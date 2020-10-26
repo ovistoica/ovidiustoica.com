@@ -11,7 +11,7 @@ import {Icon} from 'react-icons-kit';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import {portfolioTheme} from '../../theme';
 
-const Footer = ({row, col, iconContainer, footerCol}) => {
+const Footer = ({row, col, iconContainer, footerCol, showCTA = true}) => {
   const breakpoints = useBreakpoint(portfolioTheme.breakpoints);
   const footerStyle = {
     ...footerCol,
@@ -22,31 +22,33 @@ const Footer = ({row, col, iconContainer, footerCol}) => {
   return (
     <FooterWrapper>
       <Container noGutter mobileGutter width="1440px">
-        <Box {...row}>
-          <Box {...iconContainer}>
-            <WebdevIcon className="web-icon" />
+        {showCTA ? (
+          <Box {...row}>
+            <Box {...iconContainer}>
+              <WebdevIcon className="web-icon" />
+            </Box>
+            <Box
+              {...col}
+              width={[1, 1, 1, 1 / 2, 1 / 1.5]}
+              ml={['0px', '0px', '30px', '30px', '50px']}
+            >
+              <Text
+                as="h2"
+                content="If you're eager to build your new application or have an old one redone, I am here and ready to work."
+                color="mainText"
+                textAlign="left"
+                mb="10px"
+              />
+              <Text
+                className="description"
+                content="Since 2016, I've helped business owners like you to bring their ideas into reality."
+                color="secondaryText"
+                textAlign="left"
+              />
+              <Button title="Let's work together" icon={buttonIcon} />
+            </Box>
           </Box>
-          <Box
-            {...col}
-            width={[1, 1, 1, 1 / 2, 1 / 1.5]}
-            ml={['0px', '0px', '30px', '30px', '50px']}
-          >
-            <Text
-              as="h2"
-              content="If you're eager to build your new application or have an old one redone, I am here and ready to work."
-              color="mainText"
-              textAlign="left"
-              mb="10px"
-            />
-            <Text
-              className="description"
-              content="Since 2016, I've helped business owners like you to bring their ideas into reality."
-              color="secondaryText"
-              textAlign="left"
-            />
-            <Button title="Let's work together" icon={buttonIcon} />
-          </Box>
-        </Box>
+        ) : null}
         <Box {...row} justifyContent="space-evenly">
           <Box {...footerStyle}>
             <Text as="h4" content="Stoica Ovidiu " color="mainText" mb="5px" />

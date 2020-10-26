@@ -10,12 +10,14 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-
+  height: 100px;
   li {
     padding: 5px 10px;
 
     a {
       color: ${themeGet('colors.mainBrand')};
+      font-size: 20px;
+      font-weight: 500;
       &:hover {
         color: ${props => props.theme.colors.mainText};
         transition: 0.4s;
@@ -65,7 +67,7 @@ const RightNav = ({open}) => {
         <Link href="/about">About</Link>
       </li>
       <li>
-        <Link href="/about">Start your project {arrow}</Link>
+        <Link href="/contact">Start your project {arrow}</Link>
       </li>
     </Ul>
   );

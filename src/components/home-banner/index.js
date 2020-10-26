@@ -41,8 +41,8 @@ HomeBanner.defaultProps = {
     flexDirection: 'row',
   },
   contentArea: {
-    width: ['100%', '100%', '70%', '70%'],
-    p: ['65px 0 30px 0', '65px 0 80px 0', '80px 0 60px 0', '0'],
+    width: ['100%', '100%', '70%', '60%'],
+    p: ['65px 0 30px 0', '65px 0 80px 0', '80px 0 60px 0', '80px 0 30px 0'],
     flexBox: true,
     flexWrap: 'wrap',
   },
