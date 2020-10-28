@@ -106,7 +106,6 @@ const Input = ({
         <textarea
           {...props}
           id={htmlFor}
-          name={htmlFor}
           value={state.value}
           onChange={handleOnChange}
           onBlur={handleOnBlur}
@@ -146,7 +145,6 @@ const Input = ({
           <input
             {...props}
             id={htmlFor}
-            name={htmlFor}
             type={inputType}
             value={state.value}
             onChange={handleOnChange}

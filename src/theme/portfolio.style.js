@@ -1,26 +1,6 @@
 import styled, {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
-  font-weight: 600;
-  src: url('../assets/fonts/itc-avantgarde-gothic-bold.ttf');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
-  font-weight: 500;
-  src: url('../assets/fonts/itc-avantgarde-gothic-regular.ttf');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'minion-pro', serif;
-  font-weight: 400;
-  src: url('../assets/fonts/minion-pro-regular.ttf');
-  font-style: normal;
-}
   body{
     font-family: 'monion-pro', serif;
     background-color: ${props => props.theme.mainBrand};
@@ -31,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Page Title */
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 46px;
     line-height: 63px;
 

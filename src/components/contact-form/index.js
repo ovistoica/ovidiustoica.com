@@ -4,19 +4,19 @@ import Container from '../container';
 import Text from '../text';
 import {FormWrapper} from './form.style';
 import {useFormik} from 'formik';
-import Input from '../input';
 import Button from '../button';
 import {navigate} from 'gatsby';
+import axios from 'axios';
 
 const ContactForm = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
-      phone: '',
       help: '',
     },
-    onSubmit: () => {
+    onSubmit: values => {
+      axios.post('http://46.101.224.40:3000', values);
       navigate('/thank-you');
     },
   });
@@ -41,31 +41,33 @@ const ContactForm = () => {
             color="secondaryText"
           />
         </Box>
-        <form
-          // onSubmit={formik.handleSubmit}
-          action="https://usebasin.com/f/84cc2730e401"
-        >
-          <Input
-            label="Name"
-            id="help"
-            inputType="text"
+        <form onSubmit={formik.handleSubmit}>
+          <label htmlFor="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            value={formik.values.name}
             onChange={formik.handleChange}
-            value={formik.values.help}
           />
-          <Input
-            label="Email"
+
+          <label htmlFor="email">Email</label>
+          <input
             id="email"
-            inputType="email"
-            onChange={formik.handleChange}
+            name="email"
+            type="email"
             value={formik.values.email}
-          />
-          <Input
-            label="How can I help?"
-            id="help"
-            inputType="textarea"
             onChange={formik.handleChange}
-            value={formik.values.help}
           />
+          <label htmlFor="help">How can I help?</label>
+          <textarea
+            id="help"
+            name="help"
+            type="textarea"
+            value={formik.values.help}
+            onChange={formik.handleChange}
+          />
+
           <Button
             type="submit"
             title="Submit"
