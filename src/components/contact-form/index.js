@@ -16,7 +16,7 @@ const ContactForm = () => {
       help: '',
     },
     onSubmit: values => {
-      axios.post('http://46.101.224.40:3000', values);
+      axios.post('https://mail.ovidiu-stoica.com', values);
       navigate('/thank-you');
     },
   });
