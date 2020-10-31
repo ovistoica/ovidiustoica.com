@@ -1,3 +1,4 @@
+import {themeGet} from '@styled-system/theme-get';
 import styled, {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-size: 46px;
     line-height: 63px;
+    color: ${themeGet('colors.mainText')};
 
     @media (max-width: 768px) {
       font-size: 30px;
@@ -30,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 32px;
     line-height: 36px;
     margin-top: 0;
+    color: ${themeGet('colors.mainText')};
+
 
     @media (max-width: 768px) {
       font-size: 24px;
@@ -46,6 +50,8 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 27px;
     /* identical to box height, or 112% */
     text-align: center;
+    color: ${themeGet('colors.mainText')};
+
 
     @media (max-width: 768px) {
       font-size: 20px;
@@ -60,6 +66,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-size: 20px;
     line-height: 22px;
+    color: ${themeGet('colors.mainText')};
+
   }
 
 
@@ -70,6 +78,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-size: 16px;
     line-height: 18px;
+    color: ${themeGet('colors.mainText')};
+
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -81,6 +91,8 @@ export const GlobalStyle = createGlobalStyle`
   h6 {
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     margin-top: 0;
+    color: ${themeGet('colors.mainText')};
+
   }
 
   a {
@@ -100,6 +112,17 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  p {
+    font-family: 'monion-pro', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+    
+    /* Secondary Text */
+    color: ${themeGet('colors.secondaryText')};
+  }
 `;
 
 export const ContentWrapper = styled.div`
