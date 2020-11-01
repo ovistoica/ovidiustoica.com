@@ -23,7 +23,7 @@ const IndexPage = () => (
           description="Expertly crafted with meticulous care and attention to detail."
         />
         <WorkWithCategories />
-        <Footer />
+        <Footer paddingTop="40px" />
       </ContentWrapper>
     </Fragment>
   </ThemeProvider>

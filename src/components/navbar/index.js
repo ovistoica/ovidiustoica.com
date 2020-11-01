@@ -1,15 +1,13 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import Burger from './burger';
-import {graphql, Link, useStaticQuery} from 'gatsby';
+import {Link} from 'gatsby';
 import {padding, width} from 'styled-system';
-import Box from '../box';
-import Img from 'gatsby-image';
+import Text from '../text';
 
 const Nav = styled.nav`
   width: 100%;
-  height: 70px;
-  padding: 0 20px;
+  height: 100px;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.99);
   z-index: 98;
@@ -28,6 +26,7 @@ const Nav = styled.nav`
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   ${props =>
@@ -71,25 +70,12 @@ const NavContainer = styled.div`
 `;
 
 const Navbar = ({logo}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: {eq: "logo/logo-background.png"}) {
-        childImageSharp {
-          fixed(width: 240, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <Nav>
       <NavContainer width="1200px" noGutter>
         <Link href="/" style={logo}>
-          <Box flexBox={true} flex={1}>
-            <Img fixed={data.logo.childImageSharp.fixed} objectFit="cover" />
-          </Box>
+          <Text as="h1" content="Ov" color="mainText" mb="0px" />
+          <Text as="h1" content="S" color="accent" mb="0px" />
         </Link>
         <Burger />
       </NavContainer>

@@ -69,7 +69,7 @@ ProcessSection.defaultProps = {
   },
   contentArea: {
     width: ['100%', '100%', '70%', '70%'],
-    p: ['0px 0 10px 0', '0px 0 0px 0', '0px 0 0px 0', '0px 0 80px 0'],
+    p: ['10px 0 10px 0', '0px 0 0px 0', '0px 0 0px 0', '80px 0 80px 0'],
     flexBox: true,
     flexWrap: 'wrap',
     justifyContent: 'center',

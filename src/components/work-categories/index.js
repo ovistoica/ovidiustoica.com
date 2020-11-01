@@ -30,7 +30,7 @@ const CATEGORIES = [
 ];
 
 const WORK = {
-  ['framey-main']: {
+  ['framey']: {
     name: 'Framey',
     tags: [
       'mobile',
@@ -43,7 +43,7 @@ const WORK = {
     ],
     description: 'Framey. The perfect travel companion',
   },
-  ['deepstash-web-main']: {
+  ['deepstash-web']: {
     name: 'Deepstash Web',
     tags: ['react', 'typescript', 'animations', 'nodejs'],
     description: 'Deepstash. An app for learning and self improvement',

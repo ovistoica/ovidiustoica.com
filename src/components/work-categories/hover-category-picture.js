@@ -6,6 +6,7 @@ import Text from '../text';
 import Arrow from '../hover-picture/arrow';
 import {HoverWrapper} from './work.style';
 import {WorkTag} from './work-tag';
+import {Link} from 'gatsby';
 
 const HoverPicture = ({
   container,
@@ -15,38 +16,42 @@ const HoverPicture = ({
   tags,
   name,
 }) => {
-  return (
-    <HoverWrapper {...container}>
-      <div className="hvr-sweep-to-bottom">
-        <Img
-          height="100%"
-          fluid={imageNode.childImageSharp.fluid}
-          alt={imageNode.base.split('.')[0]}
-        />
-        <Box className="image-tags" width={container.width}>
-          {tags.map(tag => {
-            return (
-              <WorkTag
-                tagName={tag}
-                selected={false}
-                key={`${name}Tag${tag}`}
-              />
-            );
-          })}
-        </Box>
+  const [projectName] = imageNode.base.split('.');
 
-        <Box className="bottom-banner" {...hoverButton}>
-          <Text
-            as="h5"
-            content={description}
-            color="mainText"
-            mb="0px"
-            ml="5px"
+  return (
+    <Link style={{padding: 0}} href={`/work/${projectName}`}>
+      <HoverWrapper {...container}>
+        <div className="hvr-sweep-to-bottom">
+          <Img
+            height="100%"
+            fluid={imageNode.childImageSharp.fluid}
+            alt={imageNode.base.split('.')[0]}
           />
-          <Arrow />
-        </Box>
-      </div>
-    </HoverWrapper>
+          <Box className="image-tags" width={container.width}>
+            {tags.map(tag => {
+              return (
+                <WorkTag
+                  tagName={tag}
+                  selected={false}
+                  key={`${name}Tag${tag}`}
+                />
+              );
+            })}
+          </Box>
+
+          <Box className="bottom-banner" {...hoverButton}>
+            <Text
+              as="h5"
+              content={description}
+              color="mainText"
+              mb="0px"
+              ml="5px"
+            />
+            <Arrow />
+          </Box>
+        </div>
+      </HoverWrapper>
+    </Link>
   );
 };
 

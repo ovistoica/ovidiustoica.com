@@ -7,7 +7,6 @@ import {ThemeProvider, css} from 'styled-components';
 import {ContentWrapper, GlobalStyle, ResetCSS, portfolioTheme} from '../theme';
 import SEO from '../components/seo';
 import Navbar from '../components/navbar';
-import Container from './container';
 
 const Layout = ({children}) => {
   return (
@@ -23,14 +22,12 @@ const Layout = ({children}) => {
           <Navbar />
           <div
             css={css`
-              padding-top: 80px;
+              padding-top: 100px;
             `}
           >
-            <Container noGutter mobileGutter width="1200px">
-              {children}
-            </Container>
+            {children}
           </div>
-          <Footer />
+          <Footer paddingTop="40px" />
         </ContentWrapper>
       </ThemeProvider>
     </>

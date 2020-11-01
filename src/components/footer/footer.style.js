@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {padding} from 'styled-system';
 
 export const FooterWrapper = styled.footer`
   $animate: all 0.2s ease-in-out;
@@ -28,4 +29,6 @@ export const FooterWrapper = styled.footer`
       align-items: flex-start;
     }
   }
+
+  ${padding}
 `;

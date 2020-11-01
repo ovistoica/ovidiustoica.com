@@ -11,7 +11,14 @@ import {Icon} from 'react-icons-kit';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import {portfolioTheme} from '../../theme';
 
-const Footer = ({row, col, iconContainer, footerCol, showCTA = true}) => {
+const Footer = ({
+  row,
+  col,
+  iconContainer,
+  footerCol,
+  showCTA = true,
+  paddingTop,
+}) => {
   const breakpoints = useBreakpoint(portfolioTheme.breakpoints);
   const footerStyle = {
     ...footerCol,
@@ -20,7 +27,7 @@ const Footer = ({row, col, iconContainer, footerCol, showCTA = true}) => {
 
   const buttonIcon = <Icon icon={ic_arrow_forward} size={25} />;
   return (
-    <FooterWrapper>
+    <FooterWrapper {...(paddingTop ? {pt: paddingTop} : {})}>
       <Container noGutter mobileGutter width="1440px">
         {showCTA ? (
           <Box {...row}>

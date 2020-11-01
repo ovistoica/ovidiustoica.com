@@ -5,18 +5,22 @@ import Box from '../box';
 import Text from '../text';
 import Arrow from './arrow';
 import {HoverWrapper} from './picture.style';
+import {Link} from 'gatsby';
 
 const HoverPicture = ({container, hoverButton, imageNode, description}) => {
+  const [projectName] = imageNode.base.split('.');
   return (
     <HoverWrapper {...container}>
-      <Img
-        fluid={imageNode.childImageSharp.fluid}
-        alt={imageNode.base.split('.')[0]}
-      />
-      <Box className="bottom-banner" {...hoverButton}>
-        <Text as="h5" content={description} color="mainText" mb="0px" />
-        <Arrow />
-      </Box>
+      <Link href={`/work/${projectName}`}>
+        <Img
+          fluid={imageNode.childImageSharp.fluid}
+          alt={imageNode.base.split('.')[0]}
+        />
+        <Box className="bottom-banner" {...hoverButton}>
+          <Text as="h5" content={description} color="mainText" mb="0px" />
+          <Arrow />
+        </Box>
+      </Link>
     </HoverWrapper>
   );
 };

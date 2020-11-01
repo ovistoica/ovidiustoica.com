@@ -4,8 +4,53 @@ import Box from '../box';
 import Text from '../text';
 import Container from '../container';
 import {BannerWrapper} from './banner.style';
+import {css} from 'styled-components';
+import {themeGet} from '@styled-system/theme-get';
 
-const DecorationBanner = ({row, contentArea, banner, title, description}) => {
+const DecorationBanner = ({
+  row,
+  contentArea,
+  banner,
+  title,
+  description,
+  hashtags,
+}) => {
+  const renderHashtags = () => {
+    return (
+      <Box {...row}>
+        {hashtags.map(hashtag => {
+          return (
+            <div
+              key={hashtag}
+              css={css`
+                background-color: ${themeGet('colors.accent')};
+                display: flex;
+                margin: 5px;
+                align-items: center;
+                justify-content: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 8px;
+              `}
+            >
+              <p
+                css={css`
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  margin: 0px;
+                  font-size: 14px;
+                  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+                  color: rgba(0, 0, 0, 0.7);
+                `}
+              >
+                #{hashtag}
+              </p>
+            </div>
+          );
+        })}
+      </Box>
+    );
+  };
   return (
     <BannerWrapper {...banner}>
       <Container noGutter mobileGutter width="1200px">
@@ -24,6 +69,7 @@ const DecorationBanner = ({row, contentArea, banner, title, description}) => {
               content={description}
               px={['0px', '0px', '0px', '0px', '30px']}
             />
+            {hashtags ? renderHashtags() : null}
           </Box>
         </Box>
       </Container>
@@ -55,6 +101,7 @@ DecorationBanner.defaultProps = {
     p: ['65px 0 80px 0', '65px 0 80px 0', '80px 0 60px 0', '0'],
     flexBox: true,
     flexWrap: 'wrap',
+    flexDirection: 'column',
     justifyContent: 'center',
     mt: '30px',
   },
