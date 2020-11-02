@@ -41,6 +41,8 @@ const DecorationBanner = ({
                   font-size: 14px;
                   font-family: 'itc-avant-garde-gothic-pro', sans-serif;
                   color: rgba(0, 0, 0, 0.7);
+                  font-style: normal;
+                  line-height: 30px;
                 `}
               >
                 #{hashtag}
@@ -62,13 +64,15 @@ const DecorationBanner = ({
               color="buttonText"
               textAlign="center"
             />
-            <Text
-              className="description"
-              color="buttonText"
-              textAlign="center"
-              content={description}
-              px={['0px', '0px', '0px', '0px', '30px']}
-            />
+            {description ? (
+              <Text
+                className="description"
+                color="buttonText"
+                textAlign="center"
+                content={description}
+                px={['0px', '0px', '0px', '0px', '30px']}
+              />
+            ) : null}
             {hashtags ? renderHashtags() : null}
           </Box>
         </Box>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Footer from './footer';
-import {ThemeProvider, css} from 'styled-components';
+import {ThemeProvider} from 'styled-components';
 
 import {ContentWrapper, GlobalStyle, ResetCSS, portfolioTheme} from '../theme';
 import SEO from '../components/seo';
@@ -20,13 +20,7 @@ const Layout = ({children}) => {
         <GlobalStyle />
         <ContentWrapper>
           <Navbar />
-          <div
-            css={css`
-              padding-top: 100px;
-            `}
-          >
-            {children}
-          </div>
+          <main>{children}</main>
           <Footer paddingTop="40px" />
         </ContentWrapper>
       </ThemeProvider>

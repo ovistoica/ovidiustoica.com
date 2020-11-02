@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 34px;
     line-height: 36px;
     margin-top: 0;
     color: ${themeGet('colors.mainText')};
@@ -112,17 +112,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  p {
-    font-family: 'monion-pro', serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-    /* or 150% */
-    
-    /* Secondary Text */
-    color: ${themeGet('colors.secondaryText')};
-  }
+
 `;
 
 export const ContentWrapper = styled.div`
