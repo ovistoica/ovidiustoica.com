@@ -28,7 +28,7 @@ const Footer = ({
   const buttonIcon = <Icon icon={ic_arrow_forward} size={25} />;
   return (
     <FooterWrapper {...(paddingTop ? {pt: paddingTop} : {})}>
-      <Container noGutter mobileGutter width="1440px">
+      <Container noGutter mobileGutter width="1200px">
         {showCTA ? (
           <Box {...row}>
             <Box {...iconContainer}>
@@ -37,7 +37,7 @@ const Footer = ({
             <Box
               {...col}
               width={[1, 1, 1, 1 / 2, 1 / 1.5]}
-              ml={['0px', '0px', '30px', '30px', '50px']}
+              ml={['0px', '0px', '30px', '30px', '80px']}
             >
               <Text
                 as="h2"
