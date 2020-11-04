@@ -8,6 +8,7 @@ import {FooterWrapper} from './footer.style';
 import Button from '../button';
 import {ic_arrow_forward} from 'react-icons-kit/md/ic_arrow_forward';
 import {Icon} from 'react-icons-kit';
+import {Link} from 'gatsby';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import {portfolioTheme} from '../../theme';
 
@@ -52,7 +53,9 @@ const Footer = ({
                 color="secondaryText"
                 textAlign="left"
               />
-              <Button title="Let's work together" icon={buttonIcon} />
+              <Link href="/contact">
+                <Button title="Let's work together" icon={buttonIcon} />
+              </Link>
             </Box>
           </Box>
         ) : null}
