@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     /* Second header */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
  
  h3 {
    /* Card Title */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -63,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h4 {
     /* Footer title */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -75,7 +75,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h5 {
      /* Modal Action */
-     font-family: 'Open Sans', sans-serif, sans-serif;
+     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -91,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
   h6 {
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-top: 0;
     color: ${themeGet('colors.mainText')};
 
@@ -99,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     /* Link */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -123,7 +123,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
 
   .nav-item {
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -131,7 +131,7 @@ export const ContentWrapper = styled.div`
   }
 
   .page-title {
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 46px;
@@ -140,7 +140,7 @@ export const ContentWrapper = styled.div`
 
   .description {
     /* description */
-    font-family: 'Noto Serif JP', serif, serif;
+    font-family: 'Noto Serif JP', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -197,7 +197,7 @@ export const ContentWrapper = styled.div`
 
   .hashtag {
     /* hashtag */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -217,7 +217,7 @@ export const ContentWrapper = styled.div`
 
   .button {
     /* Button */
-    font-family: 'Open Sans', sans-serif, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

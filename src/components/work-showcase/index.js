@@ -40,12 +40,12 @@ const WorkShowcase = () => {
         {data.allFile.edges.reverse().map(({node}) => {
           let description;
           switch (node.base.split('.')[0]) {
-            case 'deepstash-web-main': {
+            case 'deepstash-web': {
               description =
                 'Deepstash. An app for learning and self improvement';
               break;
             }
-            case 'framey-main': {
+            case 'framey': {
               description = 'Framey. The perfect travel companion';
               break;
             }
