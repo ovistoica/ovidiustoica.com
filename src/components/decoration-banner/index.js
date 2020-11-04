@@ -39,7 +39,7 @@ const DecorationBanner = ({
                   font-weight: 600;
                   margin: 0px;
                   font-size: 14px;
-                  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+                  font-family: 'Open Sans', sans-serif;
                   color: rgba(0, 0, 0, 0.7);
                   font-style: normal;
                   line-height: 30px;

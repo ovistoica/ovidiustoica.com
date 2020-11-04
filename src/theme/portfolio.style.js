@@ -2,17 +2,19 @@ import {themeGet} from '@styled-system/theme-get';
 import styled, {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Open+Sans:wght@300;400;700&display=swap');
+
   body{
-    font-family: 'monion-pro', serif;
+    font-family: 'Noto Serif JP', serif;
     background-color: ${props => props.theme.mainBrand};
     margin: 0px;
   }
 
   h1 {
     /* Page Title */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 46px;
     line-height: 63px;
     color: ${themeGet('colors.mainText')};
@@ -26,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     /* Second header */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
@@ -43,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
  
  h3 {
    /* Card Title */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -61,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h4 {
     /* Footer title */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -73,7 +75,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h5 {
      /* Modal Action */
-     font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+     font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -89,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
   h6 {
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     margin-top: 0;
     color: ${themeGet('colors.mainText')};
 
@@ -97,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     /* Link */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -121,7 +123,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
 
   .nav-item {
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -129,7 +131,7 @@ export const ContentWrapper = styled.div`
   }
 
   .page-title {
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 46px;
@@ -138,7 +140,7 @@ export const ContentWrapper = styled.div`
 
   .description {
     /* description */
-    font-family: 'monion-pro', serif;
+    font-family: 'Noto Serif JP', serif, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -195,7 +197,7 @@ export const ContentWrapper = styled.div`
 
   .hashtag {
     /* hashtag */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -215,7 +217,7 @@ export const ContentWrapper = styled.div`
 
   .button {
     /* Button */
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

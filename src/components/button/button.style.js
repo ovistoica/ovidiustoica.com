@@ -16,7 +16,7 @@ const ButtonStyle = styled.button`
   min-height: ${themeGet('heights.3', '48')}px;
   min-width: ${themeGet('widths.32', '48')}px;
   border-radius: ${themeGet('radius.0', '3')}px;
-  font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: ${themeGet('fontSizes.3', '16')}px;
   padding-top: ${themeGet('space.0', '8')}px;
   padding-bottom: ${themeGet('space.0', '8')}px;

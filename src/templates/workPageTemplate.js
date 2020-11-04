@@ -34,7 +34,7 @@ const PostContainer = styled.div`
 
   p,
   ins {
-    font-family: 'monion-pro', serif;
+    font-family: 'Noto Serif JP', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -90,7 +90,7 @@ const PostContainer = styled.div`
 
   li {
     /* description */
-    font-family: 'monion-pro', serif;
+    font-family: 'Noto Serif JP', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;

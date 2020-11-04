@@ -22,7 +22,7 @@ export const FormWrapper = styled.section`
 
   /* Label default style */
   label {
-    font-family: 'itc-avant-garde-gothic-pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: block;
     color: ${themeGet('colors.secondaryText', '#767676')};
     font-size: ${themeGet('fontSizes.0', '16')}px;
