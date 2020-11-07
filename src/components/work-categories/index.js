@@ -48,7 +48,7 @@ const WORK = {
     tags: ['react', 'typescript', 'animations', 'nodejs'],
     description: 'Deepstash. An app for learning and self improvement',
   },
-  ['deepstash']: {
+  ['deepstash-mobile']: {
     name: 'Deepstash',
     tags: [
       'mobile',
@@ -74,6 +74,7 @@ const WorkWithCategories = ({row}) => {
         filter: {
           extension: {regex: "/(png)/"}
           relativeDirectory: {regex: "/work/"}
+          name: {regex: "/work/"}
         }
       ) {
         edges {
@@ -101,7 +102,7 @@ const WorkWithCategories = ({row}) => {
   const shownWork = data.allFile.edges.reverse().filter(({node}) => {
     const currentWork = node.base.split('.')[0];
 
-    const workTags = WORK[currentWork].tags;
+    const workTags = WORK[currentWork] ? WORK[currentWork].tags : [];
     const selectedTags = Object.keys(selected).filter(value => selected[value]);
     for (let i = 0; i < selectedTags.length; ++i) {
       if (!workTags.includes(selectedTags[i])) {
@@ -129,14 +130,15 @@ const WorkWithCategories = ({row}) => {
         <ShowcaseWrapper>
           {shownWork.map(({node}) => {
             const currentWork = node.base.split('.')[0];
+            const workObject = WORK[currentWork] || {tags: []};
             return (
               <HoverPicture
                 isPhone={isPhone}
                 imageNode={node}
-                key={`${WORK[currentWork].name}`}
-                description={WORK[currentWork].description}
-                tags={WORK[currentWork].tags}
-                name={WORK[currentWork].name}
+                key={`${workObject.name}`}
+                description={workObject.description}
+                tags={workObject.tags}
+                name={workObject.name}
               />
             );
           })}

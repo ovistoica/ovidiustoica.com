@@ -17,7 +17,7 @@ const DeepstashWebSlider = () => {
         filter: {
           extension: {regex: "/(png)/"}
           relativeDirectory: {regex: "/work/"}
-          name: {regex: "/deepstash-web/"}
+          name: {regex: "/deepstash-mobile/"}
         }
       ) {
         edges {
