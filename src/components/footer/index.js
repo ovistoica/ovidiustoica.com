@@ -69,9 +69,9 @@ const Footer = ({
               classname="description"
               mb="10px"
             />
-            <a href="https://www.iubenda.com/en/privacy-and-cookie-policy-generator?utm_source=adwords&utm_medium=ppc&utm_campaign=aw_general_restoftheworld_exact&utm_term=privacy%20policy&utm_content=326103716360&gclid=Cj0KCQjwp4j6BRCRARIsAGq4yMFYTzaOxOWhlYmiAg7mnMpPtgHBN2TLrDna7pQiWZ8Aq8ps0zQTjVEaArjuEALw_wcB">
+            <Link href="/privacy">
               <Text content="Privacy Policy" />
-            </a>
+            </Link>
           </Box>
           <Box {...footerStyle}>
             <Text as="h4" content="Work together " color="mainText" mb="5px" />
