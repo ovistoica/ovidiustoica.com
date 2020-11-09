@@ -17,7 +17,7 @@ const QuoteCard = ({
 }) => {
   const data = useStaticQuery(graphql`
     query {
-      author: file(relativePath: {eq: "costumer.png"}) {
+      author: file(relativePath: {eq: "robert.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -33,7 +33,7 @@ const QuoteCard = ({
           <QuoteIcon />
           <Text
             className="quote"
-            content="Ovidiu built the mobile app for my haircut business and everything was done speedily and on a good budget. I would absolutely recommend him to anyone."
+            content="Ovidiu helped me build Framey, the travel app that I was dreaming about for years. His work is performant, transparent and on time! I would absolutely recommend his services"
           />
 
           <Box {...authorContainer}>
@@ -65,13 +65,13 @@ QuoteCard.defaultProps = {
     alignItems: 'center',
     p: '20px',
   },
-  authorName: 'John Smith',
-  authorDescription: 'Big Business Ltd.',
+  authorName: 'Robert Preoteasa',
+  authorDescription: 'Founder at Framey',
   imageContainer: {
     width: ['60px', '96px', '96px', '96px', '96px'],
     height: ['60px', '96px', '96px', '96px', '96px'],
     backgroundColor: '#c4c4c4',
-    borderRadius: '80px',
+    borderRadius: '100px',
   },
   nameContainer: {
     flexBox: true,
